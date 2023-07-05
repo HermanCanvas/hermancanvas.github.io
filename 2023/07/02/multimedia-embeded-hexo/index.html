@@ -194,13 +194,13 @@
       <div class="col-xl-6"><article class="article">
   <div class="wrap">
     <section class="head">
-  <img   class="lazyload" data-original="https://sirius.130014.xyz/2023/06/14/d21d9e1.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <img   class="lazyload" data-original="https://sirius.130014.xyz/2023/06/14/c6487dc.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
     <h1 class="head-title">插入多媒体文件到Hexo博客</h1>
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>July 02, 2023</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>4387</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>5489</span>
     </div>
   </div>
 </section>
@@ -255,6 +255,19 @@
 <p>效果如下：</p>
 <div style="padding:48.17% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/841642634?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="BoomScreenRecord"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
+<h2 id="从youtube上插入视频"><a href="#从youtube上插入视频" class="headerlink" title="从youtube上插入视频"></a>从youtube上插入视频</h2><p>方法与vimeo非常相似，不同的是第二种<code>embed</code>方法在vimeo可以选择responsive ratio and fxied ration,但在youtube只有fixed ratio, 这个设置显然对跨平台，跨设备显示不是很友好，也就是说固定的视频窗口大小可能在桌面浏览器端显示得很好，但对于平板电脑或者手机就不适合了，为了解决这个问题，我们需要添加一些<code>html</code>代码对youtube的default embed code进行一下调整。</p>
+<p>例如下面这段youtube视频用的是默认的embed代码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;560&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;315&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://www.youtube.com/embed/M3DrqV9UFDc&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;YouTube video player&quot;</span> <span class="hljs-attr">frameborder</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">allow</span>=<span class="hljs-string">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot;</span> <span class="hljs-attr">allowfullscreen</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<p>效果如下（需要在不同的设备浏览器上验证）：</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/M3DrqV9UFDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<p>添加了responsive code后，代码变成</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;padding:48.17% 0 0 0;position:relative;&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://www.youtube.com/embed/M3DrqV9UFDc&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;YouTube video player&quot;</span> <span class="hljs-attr">frameborder</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">allow</span>=<span class="hljs-string">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot;</span> <span class="hljs-attr">allowfullscreen</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;position:absolute;top:0;left:0;width:100%;height:100%;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<p>显示效果如下：</p>
+<div style="padding:48.17% 0 0 0;position:relative;">
+<iframe src="https://www.youtube.com/embed/M3DrqV9UFDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+
 <h1 id="图片文件的插入"><a href="#图片文件的插入" class="headerlink" title="图片文件的插入"></a>图片文件的插入</h1><h2 id="本地图片和图床图片的插入"><a href="#本地图片和图床图片的插入" class="headerlink" title="本地图片和图床图片的插入"></a>本地图片和图床图片的插入</h2><p>首先明确一下图床网站的定义，对所存储图片提供各种格式链接的网站才是图床（photo hosting server), 关于操作方法可以参考Herman的一篇博客文章 <a target="_blank" rel="noopener" href="http://blog.hermanteng.net/2020/11/27/How-to-let-local-images-display-on-your-hexo-blog-website/"><strong>How to let local images display on your hexo blog website</strong></a></p>
 <h2 id="Google-Drive中图片的插入"><a href="#Google-Drive中图片的插入" class="headerlink" title="Google Drive中图片的插入"></a>Google Drive中图片的插入</h2><p>这里有点tricky，图片共享链接不能拿来直接用，因为页面不会显示图片，所以，要对URL进行一下改写和调整，具体来说将默认的共享链接</p>
 <figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-link">https://drive.google.com/file/d/</span>[<span class="hljs-string">image_id</span>]/view?usp=sharing<br></code></pre></td></tr></table></figure>
@@ -262,7 +275,8 @@
 <figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-link">https://drive.google.com/uc?export=view&amp;id=</span>[<span class="hljs-string">image_id</span>]<br></code></pre></td></tr></table></figure>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://drive.google.com/uc?export=view&amp;id=12AHklgVeAdFvUa-DaT1gNea_Kds03zxh&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;500&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;850&quot;</span>&gt;</span><br></code></pre></td></tr></table></figure>
 <p>效果如下：<br><img   class="lazyload" data-original="https://drive.google.com/uc?export=view&id=12AHklgVeAdFvUa-DaT1gNea_Kds03zxh" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  width="500" height="850"></p>
-<h1 id="音频文件的插入"><a href="#音频文件的插入" class="headerlink" title="音频文件的插入"></a>音频文件的插入</h1><h2 id="从本地硬盘中插入"><a href="#从本地硬盘中插入" class="headerlink" title="从本地硬盘中插入"></a>从本地硬盘中插入</h2><p>与插入视频文件类似，将音频文件放到<code>source</code>文件夹中，然后将相对路径写入到<code>markdown</code>博客文件中就行了，但为了能更好的用户体验，最好也连播放器一起插入</p>
+<p> 音频文件的插入</p>
+<h2 id="从本地硬盘中插入"><a href="#从本地硬盘中插入" class="headerlink" title="从本地硬盘中插入"></a>从本地硬盘中插入</h2><p>与插入视频文件类似，将音频文件放到<code>source</code>文件夹中，然后将相对路径写入到<code>markdown</code>博客文件中就行了，但为了能更好的用户体验，最好也连播放器一起插入</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">audio</span> <span class="hljs-attr">controls</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/audios/BEP040ADV-Interviews1_First_round.mp3&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;audio/mpeg&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">audio</span>&gt;</span><br></code></pre></td></tr></table></figure>
 <p>效果如下：<br><audio controls><br>  <source src="/audios/BEP040ADV-Interviews1_First_round.mp3" type="audio/mpeg"><br></audio></p>
 <h2 id="从Google-Drive上插入"><a href="#从Google-Drive上插入" class="headerlink" title="从Google Drive上插入"></a>从Google Drive上插入</h2><p>当然为了音频文件的长久有效，还是推荐将文件放到云端服务器上如Google Drive</p>
