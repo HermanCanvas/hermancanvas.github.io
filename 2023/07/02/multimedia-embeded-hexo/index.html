@@ -194,13 +194,13 @@
       <div class="col-xl-6"><article class="article">
   <div class="wrap">
     <section class="head">
-  <img   class="lazyload" data-original="https://i.ibb.co/b1vmtVM/20210628213548.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <img   class="lazyload" data-original="https://i.ibb.co/DDntY5r/20210628214443.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
     <h1 class="head-title">插入多媒体文件到Hexo博客</h1>
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>July 02, 2023</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>5489</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>5609</span>
     </div>
   </div>
 </section>
@@ -268,13 +268,21 @@
 <iframe src="https://www.youtube.com/embed/M3DrqV9UFDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
 </div>
 
-<h1 id="图片文件的插入"><a href="#图片文件的插入" class="headerlink" title="图片文件的插入"></a>图片文件的插入</h1><h2 id="本地图片和图床图片的插入"><a href="#本地图片和图床图片的插入" class="headerlink" title="本地图片和图床图片的插入"></a>本地图片和图床图片的插入</h2><p>首先明确一下图床网站的定义，对所存储图片提供各种格式链接的网站才是图床（photo hosting server), 关于操作方法可以参考Herman的一篇博客文章 <a target="_blank" rel="noopener" href="http://blog.hermanteng.net/2020/11/27/How-to-let-local-images-display-on-your-hexo-blog-website/"><strong>How to let local images display on your hexo blog website</strong></a></p>
-<h2 id="Google-Drive中图片的插入"><a href="#Google-Drive中图片的插入" class="headerlink" title="Google Drive中图片的插入"></a>Google Drive中图片的插入</h2><p>这里有点tricky，图片共享链接不能拿来直接用，因为页面不会显示图片，所以，要对URL进行一下改写和调整，具体来说将默认的共享链接</p>
+<div style="padding:48.17% 0 0 0;position:relative;">
+<iframe  src="https://www.youtube.com/embed/z1pIJ_BKE2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+# 图片文件的插入
+## 本地图片和图床图片的插入
+首先明确一下图床网站的定义，对所存储图片提供各种格式链接的网站才是图床（photo hosting server), 关于操作方法可以参考Herman的一篇博客文章 [**How to let local images display on your hexo blog website**](http://blog.hermanteng.net/2020/11/27/How-to-let-local-images-display-on-your-hexo-blog-website/)
+## Google Drive中图片的插入
+这里有点tricky，图片共享链接不能拿来直接用，因为页面不会显示图片，所以，要对URL进行一下改写和调整，具体来说将默认的共享链接
 <figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-link">https://drive.google.com/file/d/</span>[<span class="hljs-string">image_id</span>]/view?usp=sharing<br></code></pre></td></tr></table></figure>
-<p>换成下面的格式</p>
+换成下面的格式
 <figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-link">https://drive.google.com/uc?export=view&amp;id=</span>[<span class="hljs-string">image_id</span>]<br></code></pre></td></tr></table></figure>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://drive.google.com/uc?export=view&amp;id=12AHklgVeAdFvUa-DaT1gNea_Kds03zxh&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;500&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;850&quot;</span>&gt;</span><br></code></pre></td></tr></table></figure>
-<p>效果如下：<br><img   class="lazyload" data-original="https://drive.google.com/uc?export=view&id=12AHklgVeAdFvUa-DaT1gNea_Kds03zxh" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  width="500" height="850"></p>
+效果如下：
+<img   class="lazyload" data-original="https://drive.google.com/uc?export=view&id=12AHklgVeAdFvUa-DaT1gNea_Kds03zxh" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  width="500" height="850">
+
 <p> 音频文件的插入</p>
 <h2 id="从本地硬盘中插入"><a href="#从本地硬盘中插入" class="headerlink" title="从本地硬盘中插入"></a>从本地硬盘中插入</h2><p>与插入视频文件类似，将音频文件放到<code>source</code>文件夹中，然后将相对路径写入到<code>markdown</code>博客文件中就行了，但为了能更好的用户体验，最好也连播放器一起插入</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">audio</span> <span class="hljs-attr">controls</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/audios/BEP040ADV-Interviews1_First_round.mp3&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;audio/mpeg&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">audio</span>&gt;</span><br></code></pre></td></tr></table></figure>
@@ -317,7 +325,7 @@
 
         
   <nav class="nav">
-    <a href="/2023/07/03/drama-legend-of-the-condor-heroes-2017/"><i class="iconfont iconleft"></i>射雕英雄传2017版观感</a>
+    <a></a>
     <a href="/2023/06/18/romance-on-lushan-mountain/">美丽的庐山，美丽的爱情：当年预示着崭新时代到来的《庐山恋》已变成了现代爱情的乌托邦<i class="iconfont iconright"></i></a>
   </nav>
 
